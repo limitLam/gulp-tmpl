@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chorme=1" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="copyright" content="本页版权归Limit所有·All Rights Reserved" />
+    <meta name="description" content="xxx" />
+    <meta name="keywords" content="xxx" />
+    <meta name="Robots" content="all" />
+
+	<title>
+      {# 加载页面title项 #}
+      {% block title %}{% endblock %}
+    </title>
+
+	{# 加载公共样式表 #}
+    {% block globalCss %}{% endblock %}
+
+
+    {# 加载页面专有样式表 #}
+    {% block css %}{% endblock %}
+
+
+    {# 加载页面内联 css 代码 #}
+    {% block stylePage %}{% endblock %}
+</head>
+{# 加载页面 body 类 #}
+	<body {% block bodyClass %}{% endblock %}>
+
+
+  		{# 加载页面内容 #}
+  		{% block body %}{% endblock %}
+
+
+  		{# 加载弹窗内容 #}
+  		{% block modal %}{% endblock %}
+
+      <!-- 公共js -->
+
+      {% block globalJs %}{% endblock %}
+      
+  		{# 加载页面专有 javascript 文件 #}
+  		{% block js %}{% endblock %}
+
+
+  		{# 加载页面内联 javascript 代码 #}
+  		{% block jsPage %}{% endblock %}
+
+ </body>
+</html>
