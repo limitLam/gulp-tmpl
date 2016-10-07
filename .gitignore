@@ -15,3 +15,5 @@ a.out
 node_modules
 
 dist
+
+npm-debug.log
