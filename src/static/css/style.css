@@ -2392,4 +2392,7 @@ input.item_add.items {
 .item_quantity {
     width: 61%;
 }
+/*脚部产品列表样式*/
+.product-list{
+	width:10%;
 }
