@@ -1,15 +1,14 @@
 .memenu
-{margin:0;padding:0;width:100%;list-style:none;display:inline-block;position:relative;font-family:Calibri,Arial;font-size:15px}
-.memenu li{text-align:left;}
-ul.memenu.skyblue {text-align: center;}
+{margin:0;padding:0;width:100%;list-style:none;display:inline-block;position:relative;font-family:Calibri,Arial;font-size:15px;min-height: 97px;}
+.memenu li{text-align:left;position: relative;	}
 .memenu>li>a{ font-family: 'Dosis-Regular';float:left;padding:38px 30px;color:#caccce;font-weight:600;text-decoration:none;text-transform:uppercase;border-right: 1px solid #eee;transition:color .4s ease-in-out;-moz-transition:color .4s ease-in-out;-webkit-transition:color .4s ease-in-out;-o-transition:color .4s ease-in-out}
 .memenu>li>.mepanel {
 	position: absolute;
 	display: none;
 	background: #fff;
-	width: 18%;
+	width: 100%;
 	top: 97px;
-	left: 28%;
+	left: 0%;
 	z-index: 99;
 	padding: 20px 30px 20px;
 	border: solid 1px #ccc;
@@ -201,4 +200,3 @@ left: 4.5%;
   font-size: 1em;
 }
 }
-	
