@@ -121,8 +121,9 @@ h1.b1,h2.b2,h3.b3 {
 	position:absolute;
 	top:0px;
 	left: 0px;
-	width:254px;
-	height:97px;
+	width:170px;
+	height:65px;
+	margin:16px 42px;
 }
 .logo img{
 	width: 100%;
