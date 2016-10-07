@@ -14,9 +14,14 @@ gulp.task('script', function() {
         .pipe(gulp.dest(config.destPath + '/static/js'));
 });
 
+gulp.task('image', function() {
+    return gulp.src([config.static + '/images/**.+(png|jpg|gif|svg)', config.static + '/images/**/**.+(png|jpg|gif|svg)'])
+        .pipe(gulp.dest(config.destPath + '/static/images'));
+});
+
 gulp.task('fonts', function() {
     return gulp.src([config.static + '/fonts/*', ])
         .pipe(gulp.dest(config.destPath + '/static/fonts'));
 });
 
-gulp.task('static', ['css', 'script', 'fonts']);
+gulp.task('static', ['css', 'script', 'image', 'fonts']);
