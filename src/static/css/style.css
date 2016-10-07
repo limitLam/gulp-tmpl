@@ -2392,3 +2392,8 @@ input.item_add.items {
     width: 61%;
 }
 }
+/*脚部产品列表样式*/
+
+.product-list{
+	width:10%;
+}
