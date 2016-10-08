@@ -1,16 +1,11 @@
 const fs = require('fs');
 
+// 同步获取json,用于避免require缓存
 const getJson = function(url, callBack) {
-    fs.readFile(url, function(err, data) {
-        if (err) {
-            throw err; }
-
-        var data = JSON.parse(data);
-
-        callBack(data);
-    });
+	var data = JSON.parse(fs.readFileSync(url));
+	return data;
 }
 
 module.exports = {
-	getJson : getJson
+	getJson: getJson
 }
