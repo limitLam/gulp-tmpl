@@ -1,6 +1,7 @@
 {
-	"static" : "./src/static/",
-	"template" : "./src/template/",
+	"static": "./src/static/",
+	"template": "./src/template/",
 	"destPath": "./dist/",
-	"dataPath": "./nunjucks/"
+	"dataPath": "./nunjucks/",
+	"rev": "./rev"
 }

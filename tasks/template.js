@@ -6,9 +6,8 @@ const $ = require('gulp-load-plugins')();
 const utils = require('../config/utils');
 const getJson = utils.getJson;
 // 模板
-gulp.task('template', ['clean:template'], function() {
-    // console.log(aliasConfig);
-    const TmplBaseConfig = require('../nunjucks/base.json'); // 基础数据，版本号等
+gulp.task('template', function() {
+    const TmplBaseConfig = getJson('nunjucks/base.json'); //基础数据，版本号等
 
     let itemData = getJson('nunjucks/items.json');
     const TmplItems = itemData.items;
@@ -29,7 +28,7 @@ gulp.task('template', ['clean:template'], function() {
             .pipe(gulp.dest(config.destPath + '/www'))
     });
 
-    gulp.src([config.template + '/**/**.html', '!' + config.template + '/**/_**.html', '!' + config.template + '/_**/*.html'])
+    return gulp.src([config.template + '/**/**.html', '!' + config.template + '/**/_**.html', '!' + config.template + '/_**/*.html'])
         .pipe($.nunjucksRender({
             path: [config.template],
             data: TmplBaseConfig
@@ -39,9 +38,4 @@ gulp.task('template', ['clean:template'], function() {
         }))
         .pipe(gulp.dest(config.destPath + '/www'))
 
-});
-
-gulp.task('clean:template', function() {
-    return gulp.src(config.destPath + '/www')
-        .pipe($.clean());
 });
