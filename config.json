@@ -3,5 +3,6 @@
 	"template": "./src/template/",
 	"destPath": "./dist/",
 	"dataPath": "./nunjucks/",
-	"rev": "./rev"
+	"rev": "./rev",
+	"port": "3000"
 }

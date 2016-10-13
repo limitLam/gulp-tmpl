@@ -25,7 +25,7 @@ gulp.task('template', function() {
                 indent_size: 2
             }))
             .pipe($.rename('item/' + item.id + '.html'))
-            .pipe(gulp.dest(config.destPath + '/www'))
+            .pipe(gulp.dest(config.destPath))
     });
 
     return gulp.src([config.template + '/**/**.html', '!' + config.template + '/**/_**.html', '!' + config.template + '/_**/*.html'])
@@ -36,6 +36,6 @@ gulp.task('template', function() {
         .pipe($.prettify({
             indent_size: 2
         }))
-        .pipe(gulp.dest(config.destPath + '/www'))
+        .pipe(gulp.dest(config.destPath))
 
 });

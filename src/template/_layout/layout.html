@@ -1,9 +1,9 @@
 {% extends "_layout/base.html" %}
 
 {% block globalCss %}
-  <link rel="stylesheet" href="/static/css/lib/bootstrap.css" />
-  <link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="/static/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" href="{{ static }}/css/lib/bootstrap.css" />
+  <link href="{{ static }}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="{{ static }}/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
 {% endblock %}
 
 {# 加载头部 #}
@@ -16,7 +16,7 @@
 {% block body %}
 
   {# 头部 #}
-  {{ header.default() }}
+  {{ header.default(static=static) }}
 
   <div class="main-body">
     {# 加载页面内容 #}
@@ -25,18 +25,18 @@
   </div>
 
   {# 底部 #}
-  {{ footer.default('这是底部') }}
+  {{ footer.default(static=static) }}
 
 {% endblock %}
 
 
 {% block globalJs %}
-  <script type="text/javascript" src="/static/js/lib/jquery-1.11.1.js"></script>
-  <script type="text/javascript" src="/static/js/lib/bootstrap.js"></script>
+  <script type="text/javascript" src="{{ static }}/js/lib/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="{{ static }}/js/lib/bootstrap.js"></script>
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-  <script type="text/javascript" src="/static/js/memenu.js"></script>
+  <script type="text/javascript" src="{{ static }}/js/memenu.js"></script>
   <script>$(document).ready(function(){$(".memenu").memenu();});</script> 
-  <script src="/static/js/responsiveslides.min.js"></script>
+  <script src="{{ static }}/js/responsiveslides.min.js"></script>
   <script>  
     $(function () {
       $("#slider").responsiveSlides({
