@@ -53,3 +53,10 @@ package.json 				#项目信息文件，包括npm包
 README.md 					#markdown说明文档
 
 ```
+
+
+
+
+
+
+<!-- <meta http-equiv="refresh" content="2"> 这个用来作弊刷新md预览-->
