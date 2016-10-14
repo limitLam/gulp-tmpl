@@ -1,3 +1,4 @@
+{% set static = '../' + static %}
 {% extends "./_layout/layout.html" %}
 
 {# 填写页面 title #}
@@ -10,5 +11,5 @@
 
 {# 加载页面内容 #}
 {% block content %}
-	{{ resume }}
+	{{ name }}
 {% endblock %}

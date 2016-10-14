@@ -1,0 +1,12 @@
+{
+    "catalogs": [{
+        "id": 0,
+        "name": "all"
+    }, {
+        "id": 1,
+        "name": "class1"
+    }, {
+        "id": 2,
+        "name": "class2"
+    }]
+}

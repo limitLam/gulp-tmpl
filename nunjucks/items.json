@@ -1,12 +1,27 @@
 {
     "items": [{
         "id": 0,
-        "resume": "简述0"
+        "class" : "class0",
+        "name": "商品0"
     }, {
         "id": 1,
-        "resume": "简述1"
+        "class" : "class0",
+        "name": "商品1"
     }, {
         "id": 2,
-        "resume": "简述2"
+        "class" : "class0",
+        "name": "商品2"
+    },{
+        "id": 3,
+        "class" : "class1",
+        "name": "商品3"
+    }, {
+        "id": 4,
+        "class" : "class1",
+        "name": "商品4"
+    }, {
+        "id": 5,
+        "class" : "class1",
+        "name": "商品5"
     }]
 }
