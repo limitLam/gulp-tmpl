@@ -16,12 +16,13 @@ gulp.task('template', function() {
     //  catalog
     let catalogData = getJson('nunjucks/catalogs.json');
     const TmplCatalogs = catalogData.catalogs;
+    const TmplCatalogList = catalogData.catalogListData;    //  分类菜单数据
 
     //  遍历catalogs
     TmplCatalogs.map(function(catalog, index){
         function getData() {
             var baseData = getBaseData();
-            return Object.assign(baseData, catalog);
+            return Object.assign(baseData, catalog, TmplCatalogList);
         }
         gulp.src([config.template + '/catalog/_index.html'])
             .pipe($.data(getData)) //  数据合并

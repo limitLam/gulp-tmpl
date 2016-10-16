@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="{{ static }}/css/lib/bootstrap.css" />
   <link href="{{ static }}/css/style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="{{ static }}/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="{{ static }}/css/common.css" rel="stylesheet" type="text/css" media="all" />
 {% endblock %}
 
 {# 加载头部 #}
@@ -11,6 +12,12 @@
 
 {# 加载底部 #}
 {% import "_components/footer.html" as footer %}
+
+{# 加载面包屑导航 #}
+{% import "_components/breadcrumb.html" as breadcrumb %}
+
+{# 加载侧栏导航 #}
+{% import "_components/sidebar.html" as sidebar %}
 
 {# 公共Dom树 #}
 {% block body %}

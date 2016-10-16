@@ -2,26 +2,32 @@
     "items": [{
         "id": 0,
         "class" : "class0",
-        "name": "商品0"
+        "name": "商品0",
+        "content": "商品0"
     }, {
         "id": 1,
         "class" : "class0",
-        "name": "商品1"
+        "name": "商品1",
+        "content": "商品1"
     }, {
         "id": 2,
         "class" : "class0",
-        "name": "商品2"
+        "name": "商品2",
+        "content": "商品2"
     },{
         "id": 3,
         "class" : "class1",
-        "name": "商品3"
+        "name": "商品3",
+        "content": "商品3"
     }, {
         "id": 4,
         "class" : "class1",
-        "name": "商品4"
+        "name": "商品4",
+        "content": "商品4"
     }, {
         "id": 5,
         "class" : "class1",
-        "name": "商品5"
+        "name": "商品5",
+        "content": "商品5"
     }]
 }

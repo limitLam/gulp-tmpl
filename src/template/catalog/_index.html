@@ -10,5 +10,12 @@
 
 {# 加载页面内容 #}
 {% block content %}
-	{{ name }}
+	<div class="product-model">
+        <div class="container">
+        	{# 面包屑导航 #}
+  			{{ breadcrumb.default(catalog=name) }}
+  			{{ sidebar.default(catalogList=catalogList,active=name) }}
+  			{{ content }}
+        </div>
+    </div>
 {% endblock %}

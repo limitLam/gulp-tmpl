@@ -15,7 +15,7 @@ gulp.task('watch', function() {
 	});
 });
 
-gulp.task('complie:template', gulpsync.sync('template', 'rev'));
+gulp.task('complie:template', gulpsync.sync(['template', 'rev']));
 gulp.task('complie:css', gulpsync.sync(['clean:css', ['css', 'template'], 'rev']));
 gulp.task('complie:js', gulpsync.sync(['clean:js', ['script', 'template'], 'rev']));
 

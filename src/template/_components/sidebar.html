@@ -1,0 +1,19 @@
+{% macro default(title='',fixClass='',static='',catalogList='',active='') %}
+<div class="rsidebar span_1_of_left">
+    <section class="sky-form">
+        <div class="product_right">
+            <h4 class="m_2">
+            	</span>Categories</h4>
+            <div class="tab1">
+                <div class="single-bottom">
+                    {% for item in catalogList %}
+                    <a href="/catalog/{{ item.linkName }}.html" {% if item.linkName == active %} class="active" {% endif%}>
+                        <p>{{ item.name }}</p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endmacro %}

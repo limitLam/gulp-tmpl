@@ -1,12 +1,80 @@
 {
     "catalogs": [{
         "id": 0,
-        "name": "all"
+        "name": "products",
+        "content": "products"
     }, {
         "id": 1,
-        "name": "class1"
+        "name": "Sports",
+        "content": "Sports"
     }, {
         "id": 2,
-        "name": "class2"
-    }]
+        "name": "Pet",
+        "content": "Pet"
+    }, {
+        "id": 3,
+        "name": "Bath",
+        "content": "Bath"
+    }, {
+        "id": 4,
+        "name": "Yoga",
+        "content": "Yoga"
+    }, {
+        "id": 5,
+        "name": "Golf",
+        "content": "Golf"
+    }, {
+        "id": 6,
+        "name": "Beach",
+        "content": "Beach"
+    }, {
+        "id": 7,
+        "name": "Daily",
+        "content": "Daily"
+    }, {
+        "id": 8,
+        "name": "Socks",
+        "content": "Socks"
+    }, {
+        "id": 9,
+        "name": "StockItem",
+        "content": "Stock Item"
+    }, {
+        "id": 10,
+        "name": "Others",
+        "content": "Others"
+    }],
+    "catalogListData": {
+        "catalogList": [{
+            "name": "Sports",
+            "linkName": "Sports"
+        }, {
+            "name": "Pet",
+            "linkName": "Pet"
+        }, {
+            "name": "Bath",
+            "linkName": "Bath"
+        }, {
+            "name": "Yoga",
+            "linkName": "Yoga"
+        }, {
+            "name": "Golf",
+            "linkName": "Golf"
+        }, {
+            "name": "Beach",
+            "linkName": "Beach"
+        }, {
+            "name": "Daily",
+            "linkName": "Daily"
+        }, {
+            "name": "Socks",
+            "linkName": "Socks"
+        }, {
+            "name": "Stock Item",
+            "linkName": "StockItem"
+        }, {
+            "name": "Others",
+            "linkName": "Others"
+        }]
+    }
 }
