@@ -1,2 +1,2 @@
 # gulp-tmpl
-A project of Static template
+A project of Static template test
