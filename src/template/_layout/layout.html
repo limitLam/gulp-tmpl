@@ -38,12 +38,11 @@
 
 
 {% block globalJs %}
-  <script type="text/javascript" src="{{ static }}/js/lib/jquery-1.11.1.js"></script>
-  <script type="text/javascript" src="{{ static }}/js/lib/bootstrap.js"></script>
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   <script type="text/javascript" src="{{ static }}/js/memenu.js"></script>
   <script>$(document).ready(function(){$(".memenu").memenu();});</script> 
   <script src="{{ static }}/js/responsiveslides.min.js"></script>
+  <script type="text/javascript" src="{{ static }}/js/lib/imagezoom.js"></script>
   <script>  
     $(function () {
       $("#slider").responsiveSlides({
@@ -55,4 +54,55 @@
       });
     });
   </script>
+<script>
+$(function(){
+  var imgList = $(".thumb-contianer ul li img");
+  var contianerWidth = $(".origin-contianer")[0].offsetWidth;
+  var sliderWidth = contianerWidth*imgList.length;
+  $(".slider").css("width",sliderWidth);
+  for (var i = 0; i < imgList.length; i++) {
+      var html = $(imgList[i]).clone();
+      $(html).css("width",contianerWidth);
+      $(html).attr("data-imagezoom","true");
+      if(i==0){
+        $(html).addClass("current");
+      }
+      $(".slider").append(html);
+  };
+
+  function slideTo(i){
+      var current = $(".slider img").index($(".current"));
+      var itemWidth = $(".slider img")[0].clientWidth;
+      var currentLeft = parseInt($(".slider").css("left"));
+      //console.log(parseInt($(".slider").css("left")));
+     $(".slider").stop(true, false).animate({"left": -i*itemWidth},"slow");
+     $(".current").removeClass("current");
+     $($(".slider img")[i]).addClass("current");
+  }
+  function slideToNext(){
+    var sliderList = $(".slider img");
+    var current = sliderList.index($(".current"));
+    var next = 0
+    if(current<(sliderList.length-1)){
+      next = current+1;
+    }
+    console.log(next);
+    slideTo(next);
+  }
+  var interval = setInterval(function () { slideToNext()},4000);
+  imgList.click(function(){
+    var index = $(".thumb-contianer img").index($(this));
+    slideTo(index);
+    clearInterval(interval);
+    interval = setInterval(function () { slideToNext()},4000);
+    // $(".origin-contianer").html(html);
+  });
+  $(".slider").hover(function(){  
+      clearInterval(interval);
+  },function(){  
+      interval = setInterval(function () { slideToNext()},4000);
+  });
+
+});
+</script>
 {% endblock %}

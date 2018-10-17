@@ -15,6 +15,7 @@ gulp.task('template', function() {
     }
     //  catalog
     let catalogData = getJson('nunjucks/catalogs.json');
+    let catalogItem = getJson('nunjucks/items.json');
     const TmplCatalogs = catalogData.catalogs;
     const TmplCatalogList = catalogData.catalogListData;    //  分类菜单数据
 
@@ -22,6 +23,7 @@ gulp.task('template', function() {
     TmplCatalogs.map(function(catalog, index){
         function getData() {
             var baseData = getBaseData();
+            catalog.itemList=catalogItem.items
             return Object.assign(baseData, catalog, TmplCatalogList);
         }
         gulp.src([config.template + '/catalog/_index.html'])
@@ -38,12 +40,15 @@ gulp.task('template', function() {
 
     //  item
     let itemData = getJson('nunjucks/items.json');
+    // let recommendItem = getJson('nunjucks/items.json');
     const TmplItems = itemData.items;
 
     // 遍历items
     TmplItems.map(function(item, index) {
         function getData() {
             var baseData = getBaseData();
+            // console.log("Aaa");
+            item.recommendItem = itemData.items;
             return Object.assign(baseData, item);
         }
         gulp.src([config.template + '/item/_index.html'])

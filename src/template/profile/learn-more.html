@@ -1,0 +1,27 @@
+{% extends "./_layout/layout.html" %}
+
+{# 填写页面 title #}
+{% block title %}Learn More - winone{% endblock %}
+
+{# 页面专有样式表地址 #}
+{% block css %}
+{% endblock %}
+
+
+{# 加载页面内容 #}
+{% block content %}
+<!--pages-starts-->
+  <div class="pages">
+    <div class="container">
+    	<ol class="breadcrumb" style="font-family:Arial;">
+		    <li><a href="index.html">Home</a></li>
+		    <li class="active">Learn More</li>
+		</ol>
+			 <h2 class="top">Learn More</h2>
+       <div style="margin-top:2rem;"></div>
+			 <img src="/static/images/exhibition.jpg" style="width:600px;margin-top:20px;left:50%;margin-left:-300px;position:relative;">
+    </div>  
+  </div>  
+<!---->
+  {{ content }}
+{% endblock %}

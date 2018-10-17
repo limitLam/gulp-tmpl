@@ -2,14 +2,177 @@
 {% extends "./_layout/layout.html" %}
 
 {# 填写页面 title #}
-{% block title %}item页{% endblock %}
+{% block title %}{{ name }} - winone{% endblock %}
 
 {# 页面专有样式表地址 #}
 {% block css %}
+<link href="/static/css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/css/items.css" rel="stylesheet" type="text/css" />
+<style>
+	.thumb-contianer li:hover{
+		cursor:pointer;
+	}
+</style>
+
 {% endblock %}
 
 
 {# 加载页面内容 #}
 {% block content %}
-	{{ name }}
+<div class="product">
+	 <div class="container">				
+		 <div class="product-price1">
+			 <div class="top-sing">
+			 	<div class="thumb-contianer">
+			 		<ul style="list-style-type:none;">
+			 			{% for item in img %}
+						<li>
+							<img src="/static/images/{{ Style_No }}/{{item}}" width="100%"/>
+						</li>
+						{% endfor %}
+					
+					</ul>
+			 	</div>
+			 	<div class="origin-contianer">
+					<div class="slider" style="position:relative">
+
+					</div>
+			 	</div>
+			 	<div style="width:42%;float:left;">
+			 		<div class="single-para ">
+			 		<h4>{{ name }}</h4>
+			 		<br />										
+			 		<table class="intro">
+			 			<tr>
+			 				<td>Style No.</td>
+			 				<td>{{ Style_No }}</td>
+			 			</tr>
+			 			<tr>
+			 				<td>Size</td>
+			 				<td>{{ Specification }}</td>
+			 			</tr>
+			 			<tr>
+			 				<td>Weight</td>
+			 				<td>{{ Weight }}</td>
+			 			</tr>
+			 			<tr>
+			 				<td>Fabric Style</td>
+			 				<td>{{ Fabric_Style }}</td>
+			 			</tr>
+			 			<tr>
+			 				<td>Composition</td>
+			 				<td>{{ Composition }}</td>
+			 			</tr>
+			 			<tr>
+			 				<td>Description</td>
+			 				<td>
+			 					<ul style="list-style-type:none;">
+			 					{% for item in Descripton %}
+									<li>{{ item }}</li>
+								{% endfor %}
+								</ul>
+			 				</td>
+			 			</tr>
+			 			<tr>
+			 				<td>Color</td>
+			 				<td>
+			 					<div style="width:1rem;height:1rem;background-color:#F00;border-radius:100%;float:left;margin-right:0.5rem;"></div>
+			 					<div style="width:1rem;height:1rem;background-color:#FF0;border-radius:100%;float:left;margin-right:0.5rem;"></div>
+			 					<div style="width:1rem;height:1rem;background-color:#00F;border-radius:100%;float:left;margin-right:0.5rem;"></div>
+			 					<div style="width:1rem;height:1rem;background-color:#000;border-radius:100%;float:left;margin-right:0.5rem;"></div>
+			 				</td>
+			 			</tr>
+			 		</table>
+			 		</div>
+					<!-- <div class="single-para ">
+						<h4>Lighting Wood Carved Mop Glass Double Wall Lamp </h4>							
+							<h5 class="item_price">$ 500.00</h5>							
+							<p class="para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Vivamus porttitor tincidunt elementum nisi a, euismod rhoncus urna. Curabitur scelerisque vulputate diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat </p>
+							<div class="prdt-info-grid">
+								 <ul>
+									 <li>- Brand : Fos Lighting</li>
+									 <li>- Dimensions : (LXBXH) in cms of...</li>
+									 <li>- Color : Brown</li>
+									 <li>- Material : Wood</li>
+								 </ul>
+							</div>
+							<div class="check">
+							 
+						    </div>
+							
+					</div> -->
+			 	</div>
+				  <!-- <div class="col-md-2 single-top">	
+				  	<ul class="slides">
+						<li>
+							<img src="/static/images/si.jpg"alt=""/>
+						</li>
+						<li>
+							 <img src="/static/images/si.jpg"alt=""/>
+						</li>
+						<li>
+						   <img src="/static/images/si.jpg"alt=""/>
+						</li> 
+						
+					  </ul>
+					 <div class="flexslider">
+						  <ul class="slides">
+							<li data-thumb="/static/images/si.jpg">
+								<div class="thumb-image"> <img src="/static/images/si.jpg" data-imagezoom="true" class="img-responsive" alt=""/> </div>
+							</li>
+							<li data-thumb="/static/images/si2.jpg">
+								 <div class="thumb-image"> <img src="/static/images/si2.jpg" data-imagezoom="true" class="img-responsive" alt=""/> </div>
+							</li>
+							<li data-thumb="/static/images/si3.jpg">
+							   <div class="thumb-image"> <img src="/static/images/si3.jpg" data-imagezoom="true" class="img-responsive" alt=""/> </div>
+							</li> 
+							
+						  </ul>
+					</div>		
+				 </div>
+				 <div class="col-md-5 single-top">
+				 	<img src="/static/images/si.jpg"alt=""/>
+				 </div>	
+			     <div class="col-md-5 single-top-in simpleCart_shelfItem">
+					  <div class="single-para ">
+						 <h4>Lighting Wood Carved Mop Glass Double Wall Lamp </h4>							
+							<h5 class="item_price">$ 500.00</h5>							
+							<p class="para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Vivamus porttitor tincidunt elementum nisi a, euismod rhoncus urna. Curabitur scelerisque vulputate diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat </p>
+							<div class="prdt-info-grid">
+								 <ul>
+									 <li>- Brand : Fos Lighting</li>
+									 <li>- Dimensions : (LXBXH) in cms of...</li>
+									 <li>- Color : Brown</li>
+									 <li>- Material : Wood</li>
+								 </ul>
+							</div>
+							<div class="check">
+							 
+						    </div>
+							
+					 </div>
+				 </div> -->
+				 <div class="clearfix"> </div>
+			 </div>
+	     </div>
+		 <div class="bottom-prdt">
+			 <div class="btm-grid-sec">
+			 	{% for item in recommend %}
+				 <div class="col-md-2 btm-grid">
+					 <a href="/item/{{ recommendItem[item].class }}/{{ recommendItem[item].name }}.html">
+						<img class="wh" src="/static/images/{{ recommendItem[item].Style_No }}/{{ recommendItem[item].img[0] }}" alt=""/>
+						<h4>{{ recommendItem[item].name }}</h4>
+						<!-- <span>$1200</span></a> -->
+				 </div>
+				 {% endfor %}
+				  <div class="clearfix"></div>
+			 </div>			
+		 </div>
+	 </div>
+</div>
+<!--蒙版-->
+<div id="mengban" style="width:100%;height:1590px;background-color:rgba(0,0,0,0.3);position:fixed;left:0;top:0;z-index:213465798;display:none"></div>
+
+	{#{ resume }#}
 {% endblock %}
+

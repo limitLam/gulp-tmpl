@@ -148,22 +148,22 @@ h1.b1,h2.b2,h3.b3 {
 .banner1{
 	background:url(../images/bnr.jpg) no-repeat 0px 0px;
 	background-size:cover;
-	min-height:585px;
+	min-height:700px;
 }
 .banner2{
 	background:url(../images/bnr2.jpg) no-repeat 0px 0px;
 	background-size:cover;
-	min-height:585px;
+	min-height:700px;
 }
 .banner3{
 	background:url(../images/bnr3.jpg) no-repeat 0px 0px;
 	background-size:cover;
-	min-height:585px;
+	min-height:700px;
 }
 .banner4{
 	background:url(../images/bnr4.jpg) no-repeat 0px 0px;
 	background-size:cover;
-	min-height:585px;
+	min-height:700px;
 }
 .rslides {
   position: relative;
@@ -612,13 +612,13 @@ background-position:-167px -36px;
     padding:4em 0 3em;
 }
 .product-model-sec {
-    margin: 4em 0 0 0;
+    margin: 1rem 0 0 0;
     float: right;
 }
 .rsidebar {
     display: block;
     float: left;
-    margin: 4em 2em 0% 0;
+    margin: 5rem 2em 0% 0;
     width: 22%;
 }
 /*-----*/
@@ -1168,7 +1168,7 @@ color:#8ce78a;
 /*--single--*/
 .single-top {
     width: 32%;
-	    margin-right: 5em;
+	    margin-right: 7%;
 }
 .thumb-image { width: 323px;
 	padding:1em;
@@ -1178,17 +1178,7 @@ color:#8ce78a;
 .single-top-in {
     width: 61%;
 }
-.imagezoom-view{
-position: absolute;
-    left: 650.5px!important;
-    top: 150px!important;
-    width: 495px;
-    height: 390px!important;
-    z-index: 2147483647;
-    overflow: hidden;
-    border: none;
-    background: rgb(0, 0, 0);
-}
+
  ul.star-footer li{
 	display:inline-block;
 	
@@ -1201,7 +1191,7 @@ position: absolute;
 }
 .single-para h4 {
     color: #000;
-  font-size: 2em;
+  font-size: 3em;
    font-family: 'Dosis-Medium';
 }
 p.para {

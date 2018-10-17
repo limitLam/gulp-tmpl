@@ -1,0 +1,33 @@
+{% extends "./_layout/layout.html" %}
+
+{# 填写页面 title #}
+{% block title %}Exhibition - winone{% endblock %}
+
+{# 页面专有样式表地址 #}
+{% block css %}
+{% endblock %}
+
+
+{# 加载页面内容 #}
+{% block content %}
+<!--pages-starts-->
+  <div class="pages">
+    <div class="container">
+    	<ol class="breadcrumb" style="font-family:Arial;">
+		    <li><a href="index.html">Home</a></li>
+		    <li class="active">Exhibition</li>
+		</ol>
+			 <h2 class="top">Exhibition</h2>
+			 <div style="text-align:center;margin-top:2rem;">
+	<span style="font-family:Arial;font-size:24px;">We hereby inform you our booth No. 16.4 J05 for the 115th Canton Fair.</span>
+</div>
+<span style="font-family:Arial;font-size:24px;">
+<div style="text-align:center;">
+	Time for first period from 15th-19th April, welcome to visit us.
+</div>
+</span>
+	</div>  
+  </div>  
+<!---->
+  {{ content }}
+{% endblock %}

@@ -1,53 +1,65 @@
 {% macro default(title='',fixClass='',static='') %}
+<style type="text/css">
+.footer h3{
+	font-family: 'Dosis-Medium'
+}
+</style>
 <div class="subscribe">
 	 <div class="container">
 	 </div>
 </div>
-<div class="footer">
+<div class="footer" style="font-family: 'Arial'">
 	 <div class="container">
 		 <div class="footer-grids">
-			 <div class="col-md-3 about-us">
+			 <div class="col-md-4 about-us">
+			 	<a href="/profile/about-us.html">
 				 <h3>About Us</h3>
-				 <p>Maecenas nec auctor sem. Vivamus porttitor tincidunt elementum nisi a, euismod rhoncus urna. Curabitur scelerisque vulputate arcu eu pulvinar. Fusce vel neque diam</p>
+				 <p>Winone Textile Limited was located in China. Since the company was established, the production scale is developing rapidly, the benefit improves year by year, it becomes a professional towel manufacturer with strong strength. </p>
+				</a>
 			 </div>
-			 <div class="col-md-3 ftr-grid product-list">
+			 <div class="col-md-1 ftr-grid product-list">
 					<h3>Product</h3>
 					<ul class="nav-bottom">
-						<li><a href="product.html">Sport </a></li>
-						<li><a href="product.html">Pet</a></li>
-						<li><a href="product.html">Bath</a></li>
-						<li><a href="product.html">Yoga</a></li>
-						<li><a href="product.html">Golf</a></li>
-						<li><a href="product.html">Beach</a></li>
+						<li><a href="/catalog/Sport.html">Sport </a></li>
+						<li><a href="/catalog/Pet.html">Pet</a></li>
+						<li><a href="/catalog/Bath.html">Bath</a></li>
+						<li><a href="/catalog/Yoga.html">Yoga</a></li>
+						<li><a href="/catalog/Golf.html">Golf</a></li>
+						<li><a href="/catalog/Beach.html">Beach</a></li>
 
 					</ul>					
 			 </div>
-			 <div class="col-md-3 ftr-grid">
+			 <div class="col-md-1 ftr-grid">
 					<h3>&nbsp;</h3>
 					<ul class="nav-bottom">
-						<li><a href="product.html">Daily</a></li>
-						<li><a href="product.html">Socks</a></li>
-						<li><a href="product.html">Stock&nbsp;Item</a></li>
-						<li><a href="product.html">Others</a></li>
+						<li><a href="/catalog/Daily.html">Daily</a></li>
+						<li><a href="/catalog/Socks.html">Socks</a></li>
+						<li><a href="/catalog/StockItem.html">Stock&nbsp;Item</a></li>
+						<li><a href="/catalog/Others.html">Others</a></li>
 					</ul>					
 			 </div>
-			 <div class="col-md-3 ftr-grid">
+			 <div class="col-md-2 ftr-grid">
 					<h3>More Info</h3>
 					<ul class="nav-bottom">
-						<li><a href="login.html">Exhibition</a></li>
-						<li><a href="#">Learn more</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="/profile/exhibition.html">Exhibition</a></li>
+						<li><a href="/profile/learn-more.html">Learn more</a></li>
+						<li><a href="/profile/contact-us.html">Contact Us</a></li>
 					</ul>					
 			 </div>
-				
+			 <div class="col-md-2 ftr-grid">
+					<img width="100%" src="/static/images/winone.png">
+			 </div>
+			 <div class="col-md-2 ftr-grid">
+					<img width="100%" src="/static/images/logo.png">
+			 </div>
 			 <div class="clearfix"></div>
 		 </div>
 	 </div>
 </div>
 <div class="copywrite">
 	 <div class="container">
-		 <div class="copy">
-			 <p>Copyright &copy; 2015.Company name All rights reserved.</p>
+		 <div class="copy" style="font-family:Arial;">
+			 <p>Copyright &copy; Winone All rights reserved.</p>
 		 </div>
 		 <div class="social">							
 				<a href="#"><i class="facebook"></i></a>
@@ -59,4 +71,15 @@
 		 <div class="clearfix"></div>
 	 </div>
 </div>
+<script type="text/javascript">
+$(function(){
+	document.body.style.zoom=0.75
+	var slider = $("#slider li");
+	var defaultWidth= $(".banner1").width();
+	var setHeight = defaultWidth/1080*470;
+	for(var i = 1;i<=slider.length;i++){
+		$(".banner"+i).css("min-height",setHeight+"px");
+	}
+});
+</script>
 {% endmacro %}

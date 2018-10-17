@@ -58,7 +58,7 @@ gulp.task('webserver', function() {
 		// 可以自定义配置
 		//   browser: ['chrome', 'firefox', 'Internet Explore']
 		// 只启动 chrome 开发
-		browser: ['chrome','google chrome'],
+		browser: ['chrome'],
 		// 管理代理
 		middleware: [jsonProxy]
 	})

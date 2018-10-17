@@ -1,0 +1,38 @@
+.thumb-contianer{
+	 width:7%;
+	 float:left;
+	 margin-right: 1rem;
+}
+
+.thumb-contianer ul{
+	list-style-type:none;
+}
+.thumb-contianer ul li{
+	margin-bottom: 1rem;
+	border: solid 1px #999;
+
+}
+.origin-contianer{
+	width:42%;
+	float:left;
+	border: solid 1px #999;
+	margin-right: 1rem;
+	overflow: hidden;
+}
+.intro{
+	width:100%;
+	font-size: 2rem;
+	font-family: "Arial";
+	font-weight: bold;
+	color:#666;
+}
+.intro tr{
+	border-bottom: solid 1px #CCC;
+	height:3rem;
+}
+.intro td:nth-child(1){
+	width:30%;
+}
+.intro td:nth-child(2){
+	width:auto;
+}

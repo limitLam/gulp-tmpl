@@ -1,7 +1,7 @@
 {% extends "./_layout/layout.html" %}
 
 {# 填写页面 title #}
-{% block title %}catalog页{% endblock %}
+{% block title %}{{ content }} - winone{% endblock %}
 
 {# 页面专有样式表地址 #}
 {% block css %}
@@ -11,11 +11,48 @@
 {# 加载页面内容 #}
 {% block content %}
 	<div class="product-model">
-        <div class="container">
+        <div class="container" style="margin-bottom:1rem;">
         	{# 面包屑导航 #}
   			{{ breadcrumb.default(catalog=name) }}
   			{{ sidebar.default(catalogList=catalogList,active=name) }}
-  			{{ content }}
+  			<h2>{{ content }}</h2>
+  			<div class="col-md-9 product-model-sec">
+  				{% for item in index %}
+            <a href="/item/{{ itemList[item].name }}.html">
+              </a><div class="product-grid"><a href="/item/{{ itemList[item].class }}/{{ itemList[item].name }}.html">
+                <div class="more-product">
+                  <span> </span>
+                </div>
+                <div class="product-img b-link-stripe b-animate-go  thickbox">
+                  <img src="/static/images/{{ itemList[item].Style_No }}/{{ itemList[item].img[0] }}" class="img-responsive" alt="">
+                  <div class="b-wrapper">
+                    <h4 class="b-animate b-from-left  b-delay03">
+                      <button>
+                        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View </button>
+                    </h4>
+                  </div>
+                </div>
+            </a>
+            <div class="product-info simpleCart_shelfItem">
+              <div class="product-info-cust prt_name">
+                <h4>{{ itemList[item].name }}</h4>
+                <span class="item_price"></span>
+                <!-- <div class="ofr">
+						  <p class="pric1"><del>Rs 280</del></p>
+				          <p class="disc">[12% Off]</p>
+						</div> -->
+                <!-- <input type="text" class="item_quantity" value="1" /> -->
+                <!-- <input type="button" class="item_add items" value="ADD"> -->
+                <div class="clearfix"> </div>
+              </div>
+            </div>
+            </div>
+            {% endfor %}
+          </div>
+  			
+
+  				
+  			
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,48 @@
+{% extends "./_layout/layout.html" %}
+
+{# 填写页面 title #}
+{% block title %}Contact us - winone{% endblock %}
+
+{# 页面专有样式表地址 #}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/withinpixels.css">
+{% endblock %}
+
+
+{# 加载页面内容 #}
+{% block content %}
+<!--pages-starts-->
+  <div class="pages">
+    <div class="container">
+     <ol class="breadcrumb" style="font-family:Arial;">
+		  <li><a href="index.html">Home</a></li>
+		  <li class="active">Contact Us</li>
+		 </ol>
+			 <h2 class="top">Contact Us</h2>
+			 <div style="margin-top:2rem;"></div>
+			 <ul style="margin-left:2rem">
+	<li>
+		<span style="font-family:Arial;font-size:24px;">&nbsp;&nbsp;&nbsp;Winone Textile Limited</span>
+	</li>
+	<li>
+		<span class="wpicon-location"></span>
+		<span style="font-family:Arial;font-size:24px;">Add: No.196 Audeli Road, Haimen City, Jiangsu Province, China &nbsp; ZIP: 226100</span>
+	</li>
+	<li>
+		<span class="wpicon-phone"></span>
+		<span style="font-family:Arial;font-size:24px;">Phone: +86 513-81267068</span>
+	</li>
+	<li>
+		<span class="wpicon-envelop"></span>
+		<span style="font-family:Arial;font-size:24px;">Email: sales@winone-textile.com</span>
+	</li>
+	<li>
+		<span class="wpicon-home"></span>
+		<span style="font-family:Arial;font-size:24px;">Web: www.winone-textile.com</span>
+	</li>
+</ul>
+    </div>  
+  </div>  
+<!---->
+  {{ content }}
+{% endblock %}

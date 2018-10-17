@@ -1,21 +1,19 @@
 {
     "profiles": [{
         "id": 0,
-        "content": "简介00"
-    }, {
+        "title": "About Us",
+        "content": ""
+    },{
         "id": 1,
-        "content": "简介1"
-    }, {
+        "title": "Exhibition",
+        "content":"" 
+    },{
         "id": 2,
-        "content": "简介2"
+        "title": "Learn More",
+        "content": ""
     },{
         "id": 3,
-        "content": "简介3"
-    }, {
-        "id": 4,
-        "content": "简介4"
-    }, {
-        "id": 5,
-        "content": "简介5"
+        "title": "Contact Us",
+        "content": ""
     }]
 }
